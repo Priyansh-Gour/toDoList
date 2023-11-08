@@ -3,7 +3,7 @@ const bodyParser=require("body-parser");
 const getDate = require("./date");
 const date= require(__dirname+"/date.js")
 const mongoose=require("mongoose")
-
+const DB = 'mongodb+srv://priyanshgour817:' + encodeURIComponent("Mypassword@123") + '@cluster0.78tzdeo.mongodb.net/To-do-list';
 const app=express();
 // var Items=["Buy Food","Cook Food","Eat Food"];
 // let workItems=[];
@@ -15,8 +15,10 @@ app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended:true}))
 
 // database
-mongoose.connect("mongodb://127.0.0.1:27017/todolistDB"
-);
+mongoose.connect(DB, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
 
 // schema
 const itemSchema={
