@@ -14,6 +14,7 @@ app.use(express.static("public"))
 
 app.use(bodyParser.urlencoded({extended:true}))
 
+
 // database
 mongoose.connect(DB, {
     useNewUrlParser: true,
