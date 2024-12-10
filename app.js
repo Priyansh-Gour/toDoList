@@ -8,11 +8,7 @@ const app=express();
 // var Items=["Buy Food","Cook Food","Eat Food"];
 // let workItems=[];
 
-app.set('view engine','ejs');
-
-app.use(express.static("public"))
-
-app.use(bodyParser.urlencoded({extended:true}))
+a
 
 
 // database
